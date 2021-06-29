@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         rose: '#e8b4b8',
+        basic: '#f9f4f2',
         concrete: '#47484a',
         maroon: '#361b28',
         coffee: {
@@ -16,6 +17,7 @@ module.exports = {
       },
       fontFamily: {
         'custom': ['Annie Use Your Telescope'],
+        'roboto': ['Roboto']
       },
     },
   },
