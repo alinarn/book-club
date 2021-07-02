@@ -1,17 +1,19 @@
 <h2 class="text-2xl font-custom text-coffee-default flex justify-center">currently reading:</h2>
-  <% @books.each do |book| %>
   <div class="flex flex-1 justify-around">
     <div class="flex items-center">
-      <%= button_to 'last month reads', '#', class: "font-custom text-2xl text-maroon bg-basic hover:text-coffee-light" %>
+      <%= button_to 'previous reads', books_read_path, method: :get, class: "font-custom text-2xl text-maroon bg-basic hover:text-coffee-light" %>
     </div>
 
     <div class="flex flex-col items-center font-roboto text-maroon">
-        <%= image_tag(book.image_url, size: "280", class: "mt-3") %>
-        <h2 class="font-bold text-xl mt-1"><%= book.title %></h2>
-        <p><%= book.description %></p>
+      <% @books.map do |book| %>
+        <% if book.currently_reading? %>
+          <%= image_tag(book.image_url, size: "280", class: "mt-3") %>
+          <h2 class="font-bold text-xl mt-1"><%= book.title %></h2>
+          <p><%= book.description %></p>
+        <% end %>
+      <% end %>
     </div>
-
     <div class="flex items-center">
-      <%= button_to 'future reads', '#', class: "font-custom text-2xl text-maroon bg-basic hover:text-coffee-light" %>  
+      <%= button_to 'future reads', future_read_path, method: :get, class: "font-custom text-2xl text-maroon bg-basic hover:text-coffee-light" %>  
     </div>
-  <% end %>
+</div>

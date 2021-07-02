@@ -47,6 +47,14 @@ class BooksController < ApplicationController
     end
   end
 
+  def read
+    @books_read = Book.read
+  end
+
+  def future_read
+    @future_read_books = Book.future_read
+  end
+
   # DELETE /books/1 or /books/1.json
   def destroy
     @book.destroy
