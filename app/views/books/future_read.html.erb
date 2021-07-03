@@ -1,3 +1,12 @@
-<p>here are the future reads: </p>
+<h2 class="text-2xl font-custom text-coffee-default flex justify-center">to read in the near future:</h2>
 
-<p><%= @future_read_books %></p>
+<div class="grid justify-center">
+  <div class="grid max-w-5xl md:grid-cols-5 gap-3 justify-items-center">
+    <!-- cards --->
+    <% @future_read_books.each do |book| %>
+      <div class="max-w-xs shadow-lg rounded mt-3 px-1">
+        <%= image_tag(book.image_url, size: "180") %>
+      </div>
+    <% end %>
+  </div>
+</div>
