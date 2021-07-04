@@ -7,3 +7,7 @@
 .header {
   @apply font-roboto font-bold text-base text-maroon hover:text-coffee-light;
 }
+
+.button {
+  @apply font-custom text-2xl text-maroon bg-basic hover:text-coffee-light;
+}
