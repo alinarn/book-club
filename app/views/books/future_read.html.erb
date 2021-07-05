@@ -5,7 +5,7 @@
     <!-- cards --->
     <% @future_read_books.each do |book| %>
       <div class="max-w-xs shadow-lg rounded mt-3 px-1">
-        <%= image_tag(book.image_url, size: "180") %>
+        <%= link_to image_tag(book.image_url, size: "180"), book_path(book) %>
       </div>
     <% end %>
   </div>

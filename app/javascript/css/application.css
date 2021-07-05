@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .header {
-  @apply font-roboto font-bold text-base text-maroon hover:text-coffee-light;
+  @apply font-roboto font-bold uppercase text-base text-maroon hover:text-coffee-light;
 }
 
 .button {
-  @apply font-custom text-2xl text-maroon bg-basic hover:text-coffee-light;
+  @apply font-custom text-2xl text-coffee-default bg-basic hover:text-coffee-light;
 }
