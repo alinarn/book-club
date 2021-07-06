@@ -19,6 +19,10 @@ module.exports = {
         'custom': ['Annie Use Your Telescope'],
         'roboto': ['Roboto']
       },
+      inset: {
+        '55': '55%',
+        '23': '23%',
+      },
     },
   },
   variants: {

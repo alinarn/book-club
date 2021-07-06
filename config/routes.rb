@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'home/statistics'
   get 'home/about'
   
-  resources :books do
+  resources :books, :except => :index do
     collection do
       get 'read'
       get 'future_read'

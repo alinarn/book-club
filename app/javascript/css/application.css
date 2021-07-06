@@ -11,3 +11,7 @@
 .button {
   @apply font-custom text-2xl text-coffee-default bg-basic hover:text-coffee-light;
 }
+
+.form-text-field {
+  @apply border rounded border-coffee-light pl-1;
+}
