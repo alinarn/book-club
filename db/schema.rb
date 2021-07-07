@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_06_213140) do
+ActiveRecord::Schema.define(version: 2021_07_07_022449) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_07_06_213140) do
     t.date "read_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image_url"
+    t.text "image"
     t.integer "status"
     t.string "slug"
     t.index ["slug"], name: "index_books_on_slug", unique: true
