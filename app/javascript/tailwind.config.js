@@ -10,6 +10,7 @@ module.exports = {
         basic: '#f9f4f2',
         concrete: '#47484a',
         maroon: '#361b28',
+        beige: '#d1cac7',
         coffee: {
           default: '#67595e',
           light: '#a49393',

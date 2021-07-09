@@ -11,7 +11,10 @@
   </head>
 
   <body class="bg-basic">
-    <%= render 'layouts/header' %>
+    <div class="min-h-screen">
+      <%= render 'layouts/header' %>
     <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
