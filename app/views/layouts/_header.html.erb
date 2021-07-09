@@ -1,9 +1,19 @@
-<nav class="relative overflow-hidden py-4">
-    <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-      <%= link_to "home", root_path, class: "header"%>
-      <%= link_to "stats", home_statistics_path, class: "header"%>
-      <%= link_to "about", home_about_path, class: "header"%>
-      <%= link_to "JOIN", '#', class: "float-right pr-4 font-roboto font-bold text-base text-maroon hover:text-red-900"%>
-      <%= link_to "log in", '#', class: "float-right header"%>
+<nav class="relative overflow-hidden p-4">
+  <div class="px-4 cursor-pointer lg:hidden flex justify-end" id="burger">
+    <button class="flex float-right px-3 py-2 border rounded text-maroon hover:border-coffee-light">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+</button>
+  </div>
+    <div class="w-full block flex justify-center flex-grow lg:flex lg:ml-10 lg:pr-4" id="menu">
+      <div class="lg:flex-grow lg:space-x-8">
+      <%= link_to "home", root_path, class: "header block mt-2 lg:inline-block "%>
+      <%= link_to "stats", home_statistics_path, class: "header block mt-2 lg:inline-block "%>
+      <%= link_to "about", home_about_path, class: "header block mt-2 lg:inline-block"%>
+      <%= link_to "JOIN", '#', class: "block mt-2 md:inline-block lg:float-right lg:pr-9 font-roboto font-bold text-base text-maroon hover:text-red-900"%>
+      <%= link_to "log in", '#', class: "block mt-2 pb-10 lg:inline-block lg:float-right header"%>
     </div>
+  </div>
 </nav>
+<%= javascript_pack_tag 'menu' %>

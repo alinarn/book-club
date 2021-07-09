@@ -11,7 +11,7 @@ Book.create!(title: "The Book Thief",
   author: "Markus Zusak",
   publication_date: "September 1st 2005",
   read_date: Date.parse('01.08.2021'),
-  image_url: 'thief.jpg',
+  image: 'thief.jpg',
   status: 2
   )
 
@@ -21,7 +21,7 @@ Book.create!(title: "Norwegian Wood",
   author: "Haruki Murakami",
   publication_date: "September 4th 1987",
   read_date: Date.parse('22.12.2020'),
-  image_url: 'wood.jpg',
+  image: 'wood.jpg',
   status: 1
   )
 Book.create!(title: "Who owns the future?",
@@ -29,7 +29,7 @@ Book.create!(title: "Who owns the future?",
                 and social trend of our age: the poisonous concentration of money and power in our digital networks.",
   author: "Jaron Lanier",
   publication_date: "March 7th 2013",
-  image_url: 'future.jpg'
+  image: 'future.jpg'
   )
 
 7.times do |book|
@@ -39,7 +39,7 @@ Book.create!(title: "Who owns the future?",
                 and social trend of our age: the poisonous concentration of money and power in our digital networks.",
   author: "Jaron Lanier",
   publication_date: "March 7th 2013",
-  image_url: 'future.jpg',
+  image: 'future.jpg',
   status: 0
     )
 end

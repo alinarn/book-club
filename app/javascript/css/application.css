@@ -15,3 +15,7 @@
 .form-text-field {
   @apply border rounded border-coffee-light pl-1;
 }
+
+.btn-primary {
+  @apply bg-red-800 hover:bg-red-900 text-white font-semibold py-2 px-4 rounded;
+}

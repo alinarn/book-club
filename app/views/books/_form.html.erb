@@ -17,17 +17,21 @@
     <%= form.text_field :author, class: "block form-text-field" %>
   </div>
 
-  <div class="mb-1">
+  <div class="mb-2">
     <%= form.label :publication_date %>
     <%= form.date_select :publication_date, class: "block form-text-field" %>
   </div>
 
-  <div class="mb-2">
-    <%= form.file_field :image, class: "block form-text-field" %>
+  <div class="mb-4">
+    <label class="btn-primary">
+       upload image <%= form.file_field :image, class: "hidden" %>
+    </label>
   </div>
 
-  <div class="button">
-    <%= form.submit %>
+  <div>
+    <label class="button">
+      Save Book <%= form.submit "update book", class: "hidden" %>
+    </label>
   </div>
 </div>
 <% end %>
