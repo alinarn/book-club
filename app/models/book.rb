@@ -2,7 +2,7 @@ class Book < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates :title, :description, :author, :publication_date, :image, presence: true
+  validates :title, :description, :author, :publication_date, :image, :pages, presence: true
 
   mount_uploader :image, BookUploader
 
