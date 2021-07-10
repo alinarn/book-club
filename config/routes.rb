@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get 'home/statistics'
   get 'home/about'
+  get 'club-stats', to: "books#statistics"
   
   resources :books, :except => :index do
     collection do

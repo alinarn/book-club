@@ -20,6 +20,9 @@ module.exports = {
         'custom': ['Annie Use Your Telescope'],
         'roboto': ['Roboto']
       },
+      fontSize: {
+        '4/5xl': '2.5rem',
+      },
       inset: {
         '55': '55%',
         '23': '23%',

@@ -3,9 +3,6 @@ class HomeController < ApplicationController
     @books = Book.all
   end
 
-  def statistics
-  end
-
   def about
   end
 end
