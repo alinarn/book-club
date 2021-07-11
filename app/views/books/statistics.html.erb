@@ -24,7 +24,7 @@
           <div class="p-4 transform translate-x-6 -translate-y-6 ">
             <div class="flex-grow">
               <h2 class=" text-2xl font-custom font-semibold mb-3">publication year: </h2>
-                <%= pie_chart Book.read.group_by_year(:publication_date, format: "%Y").count%>
+                <%= pie_chart @books_pub_date_by_year  %>
             </div>
           </div>
         </div>

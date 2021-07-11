@@ -10,9 +10,7 @@ Book.create!(title: "The Book Thief",
   description: "It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will be busier still.",
   author: "Markus Zusak",
   publication_date: "September 1st 2005",
-  read_date: Date.parse('01.08.2021'),
-  image: 'thief.jpg',
-  status: 2
+  status: 3
   )
 
 Book.create!(title: "Norwegian Wood",
@@ -20,16 +18,8 @@ Book.create!(title: "Norwegian Wood",
   is devoted to Naoko, a beautiful and introspective young woman, but their mutual passion is marked by the tragic death of their best friend years before.", 
   author: "Haruki Murakami",
   publication_date: "September 4th 1987",
-  read_date: Date.parse('22.12.2020'),
   image: 'wood.jpg',
-  status: 1
-  )
-Book.create!(title: "Who owns the future?",
-  description: "Tis his visionary reckoning with the most urgent economic
-                and social trend of our age: the poisonous concentration of money and power in our digital networks.",
-  author: "Jaron Lanier",
-  publication_date: "March 7th 2013",
-  image: 'future.jpg'
+  status: 2
   )
 
 7.times do |book|
@@ -39,7 +29,6 @@ Book.create!(title: "Who owns the future?",
                 and social trend of our age: the poisonous concentration of money and power in our digital networks.",
   author: "Jaron Lanier",
   publication_date: "March 7th 2013",
-  image: 'future.jpg',
-  status: 0
+  status: 1
     )
 end

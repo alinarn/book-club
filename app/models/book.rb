@@ -11,8 +11,8 @@ class Book < ApplicationRecord
   mount_uploader :image, BookUploader
 
   enum status: {
-    read: 0,
-    currently_reading: 1,
-    future_read: 2
+    read: 1,
+    currently_reading: 2,
+    future_read: 3
   }
 end

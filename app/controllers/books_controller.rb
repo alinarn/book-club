@@ -48,6 +48,7 @@ class BooksController < ApplicationController
 
   def statistics
     read
+    @books_pub_date_by_year = Book.read.group("strftime('%Y', publication_date)").count
   end
 
   # DELETE /books/1 or /books/1.json
