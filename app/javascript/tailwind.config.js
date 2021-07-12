@@ -7,8 +7,10 @@ module.exports = {
     extend: {
       colors: {
         rose: '#e8b4b8',
-        concrete: '#47484a',
+        basic: '#f9f4f2',
+        cyan: '#609696',
         maroon: '#361b28',
+        beige: '#d1cac7',
         coffee: {
           default: '#67595e',
           light: '#a49393',
@@ -16,6 +18,14 @@ module.exports = {
       },
       fontFamily: {
         'custom': ['Annie Use Your Telescope'],
+        'roboto': ['Roboto']
+      },
+      fontSize: {
+        '4/5xl': '2.5rem',
+      },
+      inset: {
+        '55': '55%',
+        '23': '23%',
       },
     },
   },

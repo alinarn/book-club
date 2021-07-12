@@ -23,12 +23,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -54,3 +54,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'friendly_id', '~> 5.4.0'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'mini_magick', '~> 4.11'
+gem 'carrierwave-aws', '~> 1.5'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+gem 'chartkick', '~> 4.0', '>= 4.0.5'
+gem 'groupdate'

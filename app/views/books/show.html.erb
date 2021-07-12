@@ -1,0 +1,25 @@
+<%= provide(:title, "#{@book.title}") %>
+<div class="sm:grid grid-cols-5 place-content-center font-roboto">
+  <div class="grid sm:col-start-1 col-end-3 justify-items-end mt-5 pr-20">
+    <%= image_tag(@book.image_url, size: 200, class: "relative") %>
+    <div class="absolute top-55 left-23 mt-3">
+      <%= form_with(model: @book, local: true) do |form| %>
+        <%= form.select :status, Book.statuses.keys %>
+      <% end %>
+      <%= link_to '(edit book)', edit_book_path(@book), class: "text-sm" %>
+    </div>
+  </div>
+  <div class="grid col-start-3 col-end-5"> 
+    <div class="font-roboto text-coffee-default">
+      <p class="font-custom text-2xl font-semibold"><%= @book.title %></p>
+      <p class="font-custom text-xl mb-2"> by <%= @book.author %></p>
+      <p class="text-base"><%= @book.description %></p>
+      <p class="mt-6 text-sm"> 
+        <span class="font-semibold"> publication date:</span>
+        <%= format_date(@book.publication_date) %>
+      </p>
+      <hr class="mt-2">
+      <p class="mt-2">discussion</p>
+    </div>
+  </div>  
+</div>

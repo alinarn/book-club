@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BookClub</title>
+    <title><%= yield(:title) %> | Afraid Of Virginia Book Club</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,11 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-red-50">
-    <%= render 'layouts/header' %>
+  <body class="bg-basic">
+    <div class="min-h-screen">
+      <%= render 'layouts/header' %>
     <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

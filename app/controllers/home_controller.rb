@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
   def index
-  end
-
-  def statistics
+    @books = Book.all
   end
 
   def about

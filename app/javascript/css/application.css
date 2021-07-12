@@ -2,3 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.header {
+  @apply font-roboto uppercase text-base text-maroon hover:text-coffee-light;
+}
+
+.button {
+  @apply font-custom text-2xl text-coffee-default bg-basic hover:text-coffee-light;
+}
+
+.form-text-field {
+  @apply border rounded border-coffee-light pl-1;
+}
+
+.btn-primary {
+  @apply bg-red-800 hover:bg-red-900 text-white font-roboto cursor-pointer py-2 px-4 rounded;
+}
