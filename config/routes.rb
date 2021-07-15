@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: { sign_up: 'join', sign_in: 'login', sign_out: 'logout' }
   root 'home#index'
   get 'about-club', to: "home#about"
   get 'club-stats', to: "books#statistics"
