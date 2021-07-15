@@ -1,4 +1,4 @@
-<nav class="relative overflow-hidden p-2">
+<nav class="relative overflow-hidden p-3">
   <div class="px-4 cursor-pointer lg:hidden flex justify-end" id="burger">
     <button class="flex float-right px-3 py-2 border rounded text-maroon hover:border-coffee-light">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -11,8 +11,13 @@
       <%= link_to "home", root_path, class: "header block mt-2 lg:inline-block "%>
       <%= link_to "stats", club_stats_path, class: "header block mt-2 lg:inline-block "%>
       <%= link_to "about", about_club_path, class: "header block mt-2 lg:inline-block"%>
-      <%= link_to "JOIN", '#', class: "block mt-2 md:inline-block lg:float-right lg:pr-9 font-roboto text-base text-maroon hover:text-red-900"%>
-      <%= link_to "log in", '#', class: "block mt-2 pb-10 lg:inline-block lg:float-right header"%>
+      <% if current_user %>
+        <%= link_to "log out", destroy_user_session_path, method: :delete, class: "header mt-2 lg:float-right" %>
+        <%= link_to 'add book', new_book_path, class: "header block mt-2 lg:float-right" %>
+      <% else %>
+        <%= link_to "JOIN", new_user_registration_path, class: "block mt-2 md:inline-block lg:float-right lg:pr-7 font-roboto text-base  text-maroon hover:text-red-900"%>
+        <%= link_to "log in", new_user_session_path, class: "block mt-2 pb-8 md:pb-2 lg:inline-block lg:float-right header"%>
+      <% end %>
     </div>
   </div>
 </nav>
