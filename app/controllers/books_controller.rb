@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
+  load_and_authorize_resource :only => [:edit, :new]
 
   # GET /books/1 or /books/1.json
   def show
