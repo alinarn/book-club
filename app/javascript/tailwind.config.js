@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         rose: '#e8b4b8',
         basic: '#f9f4f2',
+        fantasy: '#faf7f7',
         cyan: '#609696',
         maroon: '#361b28',
         beige: '#d1cac7',
