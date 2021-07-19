@@ -1,5 +1,5 @@
 <% if object.errors.any? %>
-  <div class="bg-red-50 border border-red-200 text-red-800 rounded w-1/3 px-4 py-3 ml-4 mb-2"> 
+  <div class="alert-danger"> 
     <p>alriiight! i see <%= pluralize(object.errors.count, "error") %>:</p>
     <ul>
     <% object.errors.full_messages.each do |msg| %>

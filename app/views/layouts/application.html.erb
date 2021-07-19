@@ -13,7 +13,10 @@
   <body class="bg-basic">
     <div class="min-h-screen">
       <%= render 'layouts/header' %>
-    <%= yield %>
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert-#{message_type}") %>
+      <% end %> 
+      <%= yield %>
     </div>
     <%= render 'layouts/footer' %>
   </body>
