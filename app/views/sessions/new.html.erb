@@ -1,0 +1,25 @@
+<%= provide(:title, "log in") %>
+<h2 class="flex justify-center font-custom text-3xl text-coffee-default">log in</h2>
+<div class="grid grid-cols-3">
+  <div class="grid col-start-2 col-end-3 place-content-center">
+    <%= form_with(url: login_path, scope: :session, local: true) do |form| %>
+    <div class="text-coffee-default font-roboto-300">
+
+      <div class="form-block">
+        <%= form.label :email %>
+        <%= form.email_field :email, autofocus: true, class: "form-input" %>
+      </div>
+
+      <div class="form-block">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-input" %>
+      </div>
+
+       <div class="form-block">
+         <%= form.submit "Log in", class: "btn-primary w-1/2" %>
+       </div>
+    <% end %>
+    <p>new here? <%= link_to "sign up :)", new_user_path, class: "text-red-900 hover:text-maroon" %></p>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      #send activation email
+      reset_session
+      log_in @user
       flash[:success] = "welcome to the club!"
       redirect_to root_url
     else
