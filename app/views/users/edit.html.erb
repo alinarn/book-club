@@ -1,6 +1,7 @@
 <%= provide(:title, "edit profile") %>
 <h2 class="flex justify-center font-custom text-3xl text-coffee-default">edit profile</h2>
-<div class="flex justify-center w-full">
+<div class="flex flex-col place-items-center">
   <% provide(:button_text, 'save changes') %>
   <%= render 'form' %>
+  <%= link_to 'delete profile', user_path, method: :delete %>
 </div>

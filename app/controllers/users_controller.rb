@@ -36,6 +36,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "profile deleted"
+    redirect_to root_url
+  end
+
   private
 
     def user_params
