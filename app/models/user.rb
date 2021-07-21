@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  
   attr_accessor :remember_token
 
   before_save { self.email = email.downcase }
