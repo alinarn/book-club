@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
+  before_action :logged_in_user, only: [:new, :edit]
 
   # GET /books/1 or /books/1.json
   def show
@@ -68,5 +69,13 @@ class BooksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def book_params
       params.require(:book).permit(:title, :description, :author, :publication_date, :image, :pages, :status)
+    end
+
+    def logged_in_user
+      unless current_user
+      respond_to do |format|
+          format.html { redirect_to root_url, status: :not_found }
+        end
+      end
     end
 end
