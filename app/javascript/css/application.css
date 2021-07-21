@@ -30,7 +30,7 @@
 }
 
 .alert-danger {
-  @apply bg-red-50 border border-red-200 text-red-800 rounded px-4 py-3 ml-4 mb-2;
+  @apply text-center bg-red-50 border border-red-200 text-red-800 rounded px-4 py-3 ml-4 mr-4 mb-2;
 }
 
 .alert-success {
