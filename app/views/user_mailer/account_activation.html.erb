@@ -1,0 +1,9 @@
+<h1>Afraid of Virginia Book Club</h1>
+
+<p>hey <%= @user.name %>, </p>
+
+<p>
+  welcome to the club! click the link below to activate your account:
+</p>
+
+<%= link_to 'activate', edit_account_activation_url(@user.activation_token, email: @user.email) %>
