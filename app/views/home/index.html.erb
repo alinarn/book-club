@@ -2,13 +2,13 @@
   <div class="grid md:grid-cols-3">
     <div class="grid place-content-center md:pb-32 pb-16">
       <%= button_to 'previous reads:', read_books_path, method: :get, class: "button mb-1" %>
-      <%= link_to image_tag(@books.read.last.image_url, size: "200x300"), read_books_path %>
+      <%= link_to image_tag(book_img(@books.read.last.image, 'book_cover'), size: "200x300"), read_books_path %>
     </div>
     <div class="grid place-items-center text-maroon pb-16">
       <h2 class="text-2xl font-custom text-coffee-default flex justify-center">currently reading:</h2>
       <% @books.map do |book| %>
         <% if book.currently_reading? %>
-          <%= link_to image_tag(book.image_url, size: "280", class: "mt-2"), book_path(book) %>
+          <%= link_to image_tag(book_img(book.image, 'book_cover'), size: "280", class: "mt-2"), book_path(book) %>
           <h2 class="font-roboto-300 text-xl mt-1"><%= book.title %></h2>
           <p class="font-roboto"><%= book.description %></p>
         <% end %>
@@ -16,6 +16,6 @@
     </div>
     <div class="grid place-content-center pb-32">
       <%= button_to 'future reads:', future_read_books_path, method: :get, class: "button mb-1" %>
-      <%= link_to image_tag(@books.future_read.last.image_url, size: "200x300"), future_read_books_path %>  
+      <%= link_to image_tag(book_img(@books.future_read.last.image, 'book_cover'), size: "200x300"), future_read_books_path %>
     </div>
   </div>

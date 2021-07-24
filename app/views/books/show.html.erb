@@ -1,7 +1,7 @@
 <%= provide(:title, "#{@book.title}") %>
 <div class="sm:grid grid-cols-5 place-content-center font-roboto">
   <div class="grid sm:col-start-1 col-end-3 justify-items-end mt-5 pr-20">
-    <%= image_tag(@book.image_url, size: 200, class: "relative") %>
+    <%= image_tag book_img(@book.image, 'book_cover'), size: 200, class: "relative" %>
     <div class="absolute top-55 left-23 mt-3">
       <%= form_with(model: @book, local: true) do |form| %>
         <%= form.select :status, Book.statuses.keys %>
