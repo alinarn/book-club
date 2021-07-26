@@ -24,7 +24,7 @@
           <div class="p-4 transform translate-x-6 -translate-y-6 ">
             <div class="flex-grow">
               <h2 class=" text-2xl font-custom font-semibold mb-3">publication year: </h2>
-                <%= pie_chart @books_pub_date_by_year  %>
+                <%= pie_chart format_date_by_year(@books_by_publication_date)  %>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="flex-grow">
               <h2 class=" text-2xl font-custom font-semibold mb-3">average pages per month: </h2>
               <p class="leading-relaxed text-justify font-roboto-300">
-              <%= Book.read.average(:pages).to_i %> pages
+              <%= @books_average_pages %> pages
               </p>
             </div>
           </div>

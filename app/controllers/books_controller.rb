@@ -49,7 +49,8 @@ class BooksController < ApplicationController
 
   def statistics
     read
-    @books_pub_date_by_year = Book.read.group("strftime('%Y', publication_date)").count
+    @books_by_publication_date = Book.read.group(:publication_date).count
+    @books_average_pages = Book.read.average(:pages).to_i
   end
 
   # DELETE /books/1 or /books/1.json
