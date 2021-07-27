@@ -12,6 +12,7 @@
 
       <div class="form-block">
         <%= form.label :password %>
+        <%= link_to "(forgot password)", new_password_reset_path, class: "text-red-900 hover:text-maroon" %>
         <%= form.password_field :password, class: "form-input" %>
       </div>
 

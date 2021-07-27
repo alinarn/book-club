@@ -1,0 +1,19 @@
+<%= provide(:title, "forgot password") %>
+<h2 class="flex justify-center font-custom text-3xl text-coffee-default">forgot password</h2>
+<div class="grid grid-cols-3">
+  <div class="grid col-start-2 col-end-3 place-content-center">
+    <%= form_with(url: password_resets_path, scope: :password_reset, local: true) do |form| %>
+    <div class="text-coffee-default font-roboto-300">
+
+      <div class="form-block">
+        <%= form.label :email %>
+        <%= form.email_field :email, autofocus: true, class: "form-input" %>
+      </div>
+
+      <div class="form-block">
+         <%= form.submit "submit", class: "btn-primary w-full mt-2" %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
