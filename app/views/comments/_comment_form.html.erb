@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= form_with model: @comment, url: '#' do |f| %>
+  <%= form_for @comment, url: '#' do |f| %>
       <div class="mb-1">
         <%= f.label :content, 'Comments' %>
         <%= f.text_area :content, class: "block w-full form-text-field" %>
