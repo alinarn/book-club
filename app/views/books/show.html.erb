@@ -19,7 +19,11 @@
         <%= format_date(@book.publication_date) %>
       </p>
       <hr class="mt-2">
-      <p class="mt-2">discussion</p>
+      <%= render 'comments/comment_form' %>
+
+      <div id="comments" data-book-id="<%= @book.id %>">
+        <%= render @book.comments %>
+      </div>
     </div>
   </div>  
 </div>
