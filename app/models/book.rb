@@ -8,6 +8,8 @@ class Book < ApplicationRecord
   #   record.errors.add(attr, 'currently reading is already taken, add book to future read') if value == "currently_reading"
   # end
 
+  has_many :comments, dependent: :destroy
+
   mount_uploader :image, BookUploader
 
   enum status: {

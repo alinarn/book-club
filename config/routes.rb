@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   root 'home#index'
   get 'about-club', to: "home#about"
   get 'club-stats', to: "books#statistics"
