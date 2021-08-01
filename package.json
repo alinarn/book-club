@@ -9,6 +9,7 @@
     "autoprefixer": "^9",
     "chart.js": "^3.4.1",
     "chartkick": "^4.0.5",
+    "coffeescript": "^2.5.1",
     "jquery": "^3.6.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
