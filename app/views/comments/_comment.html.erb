@@ -1,3 +1,4 @@
 <div class="border border-gray-400 mt-4 bg-white rounded-b p-4 leading-normal">
+  <%= gravatar_for(comment.user) %>
   <p class="text-gray-700 text-base"><%= comment.content %></p>
 </div>
