@@ -51,7 +51,7 @@ class BooksController < ApplicationController
 
   def statistics
     read
-    @books_by_publication_date = Book.read.group(:publication_date).count
+    @books_by_publication_date = Book.group_by_publication_date
     @books_average_pages = Book.read.average(:pages).to_i
   end
 
