@@ -1,23 +1,23 @@
-<nav class="relative overflow-hidden p-2">
+<nav class="relative overflow-hidden p-2 md:grid-flow-row">
   <div class="px-4 cursor-pointer lg:hidden flex justify-end" id="burger">
     <button class="flex float-right px-3 py-2 border rounded text-maroon hover:border-coffee-light">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-</svg>
-</button>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
   </div>
-    <div class="block flex justify-center flex-grow lg:flex lg:ml-10 lg:pr-4" id="menu">
-      <div class="lg:flex-grow lg:space-x-8">
-      <%= link_to "home", root_path, class: "header block mt-2 lg:inline-block "%>
-      <%= link_to "stats", club_stats_path, class: "header block mt-2 lg:inline-block "%>
-      <%= link_to "about", about_club_path, class: "header block mt-2 lg:inline-block"%>
+    <div class="block flex justify-center flex-grow md:mx-auto lg:ml-20 lg:pr-20" id="menu">
+      <div class="lg:flex-grow lg:space-x-8 mt-4">
+      <%= link_to "afraid of virginia book club", root_path, class: "font-roboto uppercase text-base text-maroon hover:text-red-900 pb-1"%>
       <% if logged_in? %>
-        <%= link_to "log out", logout_path, method: :delete, class: "header mt-2 lg:float-right" %>
-        <%= link_to 'add book', new_book_path, class: "header block mt-2 lg:float-right" %>
+        <%= link_to "log out", logout_path, method: :delete, class: "header" %>
+        <%= link_to 'add book', new_book_path, class: "header" %>
       <% else %>  
-        <%= link_to "join", new_user_path, class: "block mt-2 md:inline-block lg:float-right lg:pr-9 font-roboto text-base uppercase text-maroon hover:text-red-900"%>
-        <%= link_to "log in", login_path, class: "block mt-2 pb-8 md:pb-2 lg:inline-block lg:float-right header"%>
+        <%= link_to "join", new_user_path, class: "header"%>
+        <%= link_to "log in", login_path, class: "header"%>
       <% end %>
+      <%= link_to "stats", club_stats_path, class: "header"%>
+      <%= link_to "about", about_club_path, class: "header"%>
     </div>
   </div>
 </nav>

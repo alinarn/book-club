@@ -6,7 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .header {
-  @apply font-roboto uppercase text-base text-maroon hover:text-coffee-light;
+  @apply font-roboto uppercase text-base text-maroon hover:text-coffee-light block flex justify-center lg:inline-block lg:float-right pb-1;
+}
+
+.main-heading {
+  @apply text-2xl font-custom text-coffee-default flex justify-center;
 }
 
 .button {
