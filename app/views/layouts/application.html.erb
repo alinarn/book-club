@@ -11,7 +11,7 @@
   </head>
 
   <body class="bg-basic">
-    <div class="min-h-screen">
+    <div class="container mx-auto min-h-screen">
       <%= render 'layouts/header' %>
       <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert-#{message_type}") %>

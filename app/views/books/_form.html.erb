@@ -1,48 +1,48 @@
 <%= form_with(model: book, local: true) do |form| %>
 <%= render 'shared/error_messages', object: form.object %>
 
-<div class="pl-11 text-coffee-default font-roboto-300">
-  <div class="mb-1">
+<div class="text-coffee-default font-roboto-300">
+  <div class="form-block">
     <%= form.label :title %>
-    <%= form.text_field :title, class: "block form-text-field" %>
+    <%= form.text_field :title, class: "form-input" %>
   </div>
 
-  <div class="mb-1">
+  <div class="form-block">
     <%= form.label :description %>
-    <%= form.text_area :description, size: "60x10", class: "block form-text-field" %>
+    <%= form.text_area :description, size: "60x10", class: "form-input" %>
   </div>
 
-  <div class="mb-1">
+  <div class="form-block">
     <%= form.label :author %>
-    <%= form.text_field :author, class: "block form-text-field" %>
+    <%= form.text_field :author, class: "form-input" %>
   </div>
 
-  <div class="mb-1">
+  <div class="form-block">
     <%= form.label :pages %>
-    <%= form.number_field :pages, class: "block form-text-field" %>
+    <%= form.number_field :pages, class: "form-input" %>
   </div>
 
-  <div class="mb-2">
+  <div class="form-block">
     <%= form.label :publication_date %>
     <%= form.date_select :publication_date, 
                       start_year: 1800, 
                       end_year: Date.today.year,
-                      class: "block form-text-field" %>
+                      class: "form-input" %>
   </div>
 
   <div class="mb-4">
     <%= form.label :status, "Reading status" %>
-    <%= form.select :status, Book.statuses.keys, class: "block form-text-field" %>
+    <%= form.select :status, Book.statuses.keys, class: "form-input" %>
   </div>
 
   <div class="mb-4">
-    <label class="btn-primary">
+    <label class="button cursor-pointer">
        upload image <%= form.file_field :image, class: "hidden" %>
     </label>
   </div>
 
   <div>
-    <label class="button cursor-pointer font-semibold">
+    <label class="btn-primary">
       Save Book <%= form.submit "update book", class: "hidden" %>
     </label>
   </div>

@@ -38,7 +38,7 @@
 }
 
 .alert-success {
-  @apply bg-indigo-100 border border-indigo-200 text-gray-700 text-center w-1/3 rounded px-4 py-3 ml-4 mb-2;
+  @apply bg-indigo-100 border border-indigo-200 text-gray-700 text-center rounded px-4 py-3 ml-4 mb-2;
 }
 
 .alert-warning {
