@@ -1,15 +1,9 @@
 <%= provide(:title, "#{@book.title}") %>
-<div class="sm:grid grid-cols-5 place-content-center font-roboto">
-  <div class="grid sm:col-start-1 col-end-3 justify-items-end mt-5 pr-20">
-    <%= image_tag book_img(@book.image, 'book_cover'), size: 200, class: "relative" %>
-    <div class="absolute top-55 left-23 mt-3">
-      <%= form_with(model: @book, local: true) do |form| %>
-        <%= form.select :status, Book.statuses.keys %>
-      <% end %>
-      <%= link_to '(edit book)', edit_book_path(@book), class: "text-sm" %>
-    </div>
+<div class="xl:grid grid-cols-5 mx-auto place-content-center font-roboto">
+  <div class="grid col-start-1 col-end-3 justify-center xl:justify-items-end mt-5 mb-2">
+    <%= image_tag book_img(@book.image, 'book_cover'), size: 280 %>
   </div>
-  <div class="grid col-start-3 col-end-5"> 
+  <div class="xl:grid col-start-3 col-end-5 md:mx-0 mx-10"> 
     <div class="font-roboto text-coffee-default">
       <p class="font-custom text-2xl font-semibold"><%= @book.title %></p>
       <p class="font-custom text-xl mb-2"> by <%= @book.author %></p>
@@ -18,10 +12,16 @@
         <span class="font-semibold"> publication date:</span>
         <%= format_date(@book.publication_date) %>
       </p>
-      <hr class="mt-2">
+      <div class="mt-3">
+        <%= form_with(model: @book, local: true) do |form| %>
+          <%= form.select :status, Book.statuses.keys %>
+        <% end %>
+        <%= link_to '(edit book)', edit_book_path(@book), class: "text-sm inline-block" %>
+      </div>
+      <hr class="mt-2 mb-2">
       <%= render 'comments/comment_form' %>
 
-      <div id="comments" data-book-id="<%= @book.id %>">
+      <div id="comments" class="mx-auto" data-book-id="<%= @book.id %>">
         <%= render @book.comments %>
       </div>
     </div>

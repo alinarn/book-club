@@ -1,4 +1,11 @@
-<div class="border border-gray-400 mt-4 bg-white rounded-b p-4 leading-normal">
-  <%= gravatar_for(comment.user) %>
-  <p class="text-gray-700 text-base"><%= comment.content %></p>
+<div class="grid grid-cols-12 border border-coffee-light mt-4 bg-white rounded p-4 leading-normal">
+  <div class="col-start-1 col-end-2">
+    <%= gravatar_for(comment.user) %>
+  </div>
+  <div class="col-start-2 col-end-10 ml-3 text-maroon">
+    <%= comment.content %>
+    <div class="text-sm italic mt-2">
+      posted by <%= comment.user.name %> <%= time_ago_in_words(comment.created_at) %> ago
+    </div>
+  </div>
 </div>

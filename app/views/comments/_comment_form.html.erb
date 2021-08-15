@@ -1,10 +1,10 @@
 <% if current_user %>
   <%= form_for @comment, url: '#' do |f| %>
-      <div class="mb-1">
-        <%= f.label :content, 'Comments' %>
-        <%= f.rich_text_area :content, class: "block w-full form-text-field" %>
-      </div>
+    <div class="mb-1">
+      <%= f.label :content, 'Discussion', class: "font-custom text-2xl" %>
+      <%= f.rich_text_area :content, class: "block w-full form-text-field" %>
 
       <%= f.submit 'post', class:"btn-primary w-1/2 mt-2" %>
+    </div>
   <% end %>
 <% end %>
