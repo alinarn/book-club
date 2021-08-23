@@ -13,10 +13,7 @@
         <%= format_date(@book.publication_date) %>
       </p>
       <div class="mt-3">
-        <%= form_with(model: @book, local: true) do |form| %>
-          <%= form.select :status, Book.statuses.keys %>
-        <% end %>
-        <%= link_to '(edit book)', edit_book_path(@book), class: "text-sm inline-block" %>
+        <%= render 'status' %>
       </div>
       <hr class="mt-2 mb-2">
       <%= render 'comments/comment_form' %>

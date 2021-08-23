@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
-  before_action :logged_in_user, only: [:new, :edit]
+  before_action :logged_in_user, only: [:new, :edit, :update]
 
   # GET /books/1 or /books/1.json
   def show
@@ -31,11 +31,14 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1 or /books/1.json
   def update
-    if @book.update(book_params)
-      redirect_to @book
-      flash[:success] = "Book was successfully updated"
-    else
-      render :edit
+    respond_to do |format|
+      if @book.update(book_params)
+        format.html { redirect_to @book }
+        format.js
+        flash[:success] = "Book was successfully updated"
+      else
+        format.html { render :edit }
+      end
     end
   end
 
@@ -74,7 +77,8 @@ class BooksController < ApplicationController
     def logged_in_user
       unless current_user
       respond_to do |format|
-          format.html { redirect_to root_url, status: :not_found }
+          format.html { redirect_to login_url, status: :not_found }
+          flash[:warning] = "only logged in users can do that!"
         end
       end
     end

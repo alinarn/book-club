@@ -1,0 +1,7 @@
+<%= form_with(model: @book, method: :patch) do |form| %>
+  <%= form.select :status, Book.statuses.keys, {}, onchange: "javascript:this.form.commit.click();" %>
+  <%= form.submit 'save', class: "hidden" %>
+<% end %>
+<% if current_user %>
+  <%= link_to '(edit book)', edit_book_path(@book), class: "text-sm inline-block" %>
+<% end %>

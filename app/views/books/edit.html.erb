@@ -7,54 +7,11 @@
 
   <div class="md:col-start-5 md:col-end-12 w-3/4  mx-auto mt-12">
     <div class="text-coffee-default font-roboto-300">
-      <%= form_with(model: @book, local: true) do |form| %>
-
-        <div class="form-block">
-          <%= form.label :title %>
-          <%= form.text_field :title, class: "form-input" %>
-        </div>
-
-        <div class="form-block">
-          <%= form.label :description %>
-          <%= form.text_area :description, size: "60x10", class: "form-input" %>
-        </div>
-
-        <div class="form-block">
-          <%= form.label :author %>
-          <%= form.text_field :author, class: "form-input" %>
-        </div>
-
-        <div class="form-block">
-          <%= form.label :pages %>
-          <%= form.number_field :pages, class: "form-input" %>
-        </div>
-
-        <div class="form-block">
-          <%= form.label :publication_date %>
-          <%= form.date_select :publication_date, 
-                            start_year: 1800, 
-                            end_year: Date.today.year,
-                            class: "form-input" %>
-        </div>
-
-        <div class="mb-3">
-          <%= form.label :status, "Reading status" %>
-          <%= form.select :status, Book.statuses.keys, class: "form-input" %>
-        </div>
-
-        <div class="button cursor-pointer mb-3">
-          upload image <%= form.file_field :image, class: "hidden" %>
-        </div>
-
-        <div>
-          <label class="btn-primary mr-4">
-            Save Book <%= form.submit "update book", class: "hidden" %>
-          </label> 
-
-          <%= link_to 'Delete Book', book_path, method: :delete, class: "button" %>
-        </div>             
-
-    <% end %>
-    </div>
+      <%= render 'form', book: @book %>
+      <div class="float-right">
+        <%= link_to '(delete book)', book_path(@book), method: :delete, class: "button",
+                                                      data: { confirm: 'are you sure?'} %>
+      </div>
+    </div>             
   </div>
 </div>
