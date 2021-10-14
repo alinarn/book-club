@@ -1,24 +1,23 @@
-# README
+# Book Club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web app that helps to keep track of books read in the book club.
 
-Things you may want to cover:
+## Built with
 
-* Ruby version
+- Ruby 2.7.1
+- Rails 6
+- Tailwind CSS
+- PostgreSQL
 
-* System dependencies
+## Use Cases
 
-* Configuration
+1. as a non-registered user, I can register a new account with the site
+2. as a non-registered user, I can see the statistics of all read books
+3. as a non-registered user, I can view different bookshelves (read, currently reading, and future reads) and read the comments in real-time
+4. as a user, I can log in to the site
+5. as a user, I can reset the password in case forgotten
+6. as a user, I can add new books
+7. as a user, I can edit books or simply change the reading status
+8. as a user, I can post comments
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### [Link to Live Version](https://afraid-of-v-book-club.herokuapp.com/)
